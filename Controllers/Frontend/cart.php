@@ -25,7 +25,16 @@
 		        $_SESSION['cart'][$id]['number']+=$quantity;
 		    } else {
 		        //lấy thông tin sản phẩm từ CSDL và lưu vào giỏ hàng
-		        $product = db::get_one("select * from tbl_product where id=$id");
+			$conn = connection::getInstance();
+			//chuan bi truy van
+		        $query = $conn->prepare("select * from tbl_product where id=$id");
+		        //xac dinh kieu duyet phan tu
+		        $query->setFetchMode(PDO::FETCH_OBJ);
+		        //thuc thi truy van
+		        $query->execute();
+		        //lay toan bo du lieu
+		        $product = $query->fetch();
+		        
 		        
 		        $_SESSION['cart'][$id] = array(
 		            'id' => $id,
