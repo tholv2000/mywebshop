@@ -3,9 +3,9 @@
 <head>
 	<title>Admin page</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="Assets/backend/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Assets/Backend/css/bootstrap.min.css">
   <!-- load ckeditor -> ckeditor.com -->
-  <script type="text/javascript" src="Assets/backend/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="Assets/Backend/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
