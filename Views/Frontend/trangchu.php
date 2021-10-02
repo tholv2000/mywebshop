@@ -197,7 +197,7 @@
                                         <div class="single-product-wrap" style="width: 215px;">
                                             <div class="product-image">
                                                 <a href="<?php echo stripVN16($rows->category_name).'/'.stripVN16($rows->name).'/'.$rows->id; ?>">
-                                                    <img src="Assets/Upload/product/<?php echo $rows->img; ?>" alt="<?php echo $rows->name; ?>">
+                                                    <img src="Assets/Upload/Product/<?php echo $rows->img; ?>" alt="<?php echo $rows->name; ?>">
                                                 </a>
                                                 <?php if($rows->new==1): ?><span class="sticker">new</span><?php endif; ?>
                                             </div>
@@ -276,7 +276,7 @@
                                         <div class="single-product-wrap" style="width: 215px;">
                                             <div class="product-image">
                                                 <a href="<?php echo stripVN16($rows2->category_name).'/'.stripVN16($rows2->name).'/'.$rows2->id; ?>">
-                                                    <img src="Assets/Upload/product/<?php echo $rows2->img; ?>" alt="<?php echo $rows2->name; ?>">
+                                                    <img src="Assets/Upload/Product/<?php echo $rows2->img; ?>" alt="<?php echo $rows2->name; ?>">
                                                 </a>
                                                 <?php if($rows2->new==1): ?><span class="sticker">New</span><?php endif; ?>
                                             </div>
