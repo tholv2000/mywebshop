@@ -1,0 +1,51 @@
+RewriteEngine On
+#url : trang-chu ->index.php
+RewriteRule ^home$ index.php?controller=home&action=index
+RewriteEngine On
+RewriteRule ^cart$ index.php?controller=cart
+RewriteEngine On
+RewriteRule ^checkout$ index.php?controller=checkout
+RewriteEngine On
+RewriteRule ^contact$ index.php?controller=contact
+RewriteEngine On
+RewriteRule ^product$ index.php?controller=product&action=all
+RewriteEngine On
+RewriteRule ^introduce$ index.php?controller=introduce
+RewriteEngine On
+RewriteRule ^news$ index.php?controller=news&action=all
+RewriteEngine On
+RewriteRule ^wishlist$ index.php?controller=wishlist
+
+RewriteEngine On
+RewriteRule ^product/([a-zA-Z0-9]+)$ index.php?controller=product&action=$1
+
+RewriteEngine On
+RewriteRule ^([a-z-]+)/([a-zA-Z]+)/([0-9]+)$ index.php?controller=product&action=$2&id=$3
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteRule ^([a-z-]+)/([a-z0-9-]+)/([0-9]+)$ index.php?controller=product&action=detail&id=$3
+
+RewriteEngine On
+RewriteRule ^search$ index.php?controller=search&action=execute
+
+RewriteEngine On
+RewriteRule ^product-page/([0-9]+)$ index.php?controller=product&action=all&p=$1
+
+RewriteEngine On
+RewriteRule ^news/detail/([a-z0-9-]+)/([0-9]+)$ index.php?controller=news&action=detail&id=$2
+
+RewriteEngine On
+RewriteRule ^news-page/([0-9]+)$ index.php?controller=news&action=all&p=$1
+
+RewriteEngine On
+RewriteRule ^product-page/([0-9]+)/([a-zA-Z]+)$ index.php?controller=product&action=$2&p=$1
+
+RewriteEngine On
+RewriteRule ^([a-z-]+)/([0-9]+)/page/([0-9]+)$ index.php?controller=product&action=category&id=$2&p=$3
+
+RewriteEngine On
+RewriteRule ^([a-z-]+)/([0-9]+)/([a-zA-Z]+)/page/([0-9]+)$ index.php?controller=product&action=$3&id=$2&p=$4
+
+RewriteEngine On
+RewriteRule ^category/([0-9]+)/([a-z-]+)$ index.php?controller=product&action=category&id=$1
