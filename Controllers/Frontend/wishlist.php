@@ -1,6 +1,6 @@
 <?php 
 	trait wishlist{
-		public function wishlist_add($id){
+		public static function wishlist_add($id){
 		
 			if (isset($_SESSION["wishlist"][$id])==false){
 				$conn = connection::getInstance();
@@ -21,10 +21,10 @@
 				);
 			}
 		}
-		public function wishlist_delete($id){
+		public static function wishlist_delete($id){
 			unset($_SESSION["wishlist"][$id]);
 		}
-		public function wishlist_number(){
+		public static function wishlist_number(){
 			$number = 0;
 			foreach($_SESSION["wishlist"] as $product){
 				$number++;
