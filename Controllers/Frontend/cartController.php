@@ -32,15 +32,8 @@
 		    } else {
 		        //lấy thông tin sản phẩm từ CSDL và lưu vào giỏ hàng
 		        //$product = db::get_one("select * from tbl_product where id=$id");
-		        
-		        $_SESSION['cart'][$id] = array(
-		            'id' => $id,
-		            'name' => 'aa',
-		            'img' => 'b',
-		            'category'=> 'c',
-		            'number' => $quantity,
-		            'price' => '100'
-		        );
+			cart::cart_add1($id,$quantity);		        
+		       
 		    }
 			//quay tro lai trang gio hang
 			header("location:cart"); //khi khong truyen vao action thi mac dinh action=index
