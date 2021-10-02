@@ -3,7 +3,7 @@
     
 <!-- index-231:32-->
 <head>
-        <base href="http://mywebshop.herokuapp.com/">
+        <base href="https://mywebshop.herokuapp.com/">
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Limupa store</title> 
