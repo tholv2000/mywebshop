@@ -1,7 +1,7 @@
 <?php 
 	//khai bao cac bien ket noi csdl
-	$hostname = "localhost";
-	$user = "root";
-	$password = "";
-	$database = "php38_project_product";
+	$hostname = "remotemysql.com";
+	$user = "hl2yurXRxN";
+	$password = "DTM8rtmh2I";
+	$database = "hl2yurXRxN";
  ?>
