@@ -17,7 +17,7 @@
 		public function add(){
 			$id = isset($_GET["id"]) ? $_GET["id"]:0;
 			//goi ham cart_add de tham phan tu vao session array
-			//cart::cart_add($id);
+			cart::cart_add($id);
 			//quay tro lai trang gio hang
 			header("location:cart"); //khi khong truyen vao action thi mac dinh action=index
 		}
@@ -25,7 +25,7 @@
 			$id = isset($_GET["id"]) ? $_GET["id"]:0;
 			$quantity = $_POST["product_".$id];
 			//goi ham cart_add de tham phan tu vao session array
-			cart::cart_add1($id,$quantity);
+			//cart::cart_add1($id,$quantity);
 			//quay tro lai trang gio hang
 			header("location:cart"); //khi khong truyen vao action thi mac dinh action=index
 		}
