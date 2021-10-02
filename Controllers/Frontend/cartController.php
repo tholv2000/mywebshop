@@ -2,7 +2,7 @@
 	
 	class cartController extends baseController{		
 		//hien thi gio hang
-		
+		use cart;
 		public function index(){
 			/*
 				set view co 2 cach
@@ -25,7 +25,7 @@
 			$id = isset($_GET["id"]) ? $_GET["id"]:0;
 			$quantity = $_POST["product_".$id];
 			//goi ham cart_add de tham phan tu vao session array
-			//cart::cart_add1($id,$quantity);
+			cart::cart_add1($id,$quantity);
 			//quay tro lai trang gio hang
 			header("location:cart"); //khi khong truyen vao action thi mac dinh action=index
 		}
