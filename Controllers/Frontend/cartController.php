@@ -25,7 +25,23 @@
 			$id = isset($_GET["id"]) ? $_GET["id"]:0;
 			$quantity = $_POST["product_".$id];
 			//goi ham cart_add de tham phan tu vao session array
-			cart::cart_add1($id,$quantity);
+			//cart::cart_add1($id,$quantity);
+			if(isset($_SESSION['cart'][$id])){
+		        //nếu đã có sp trong giỏ hàng thì số lượng lên 1
+		        $_SESSION['cart'][$id]['number']+=$quantity;
+		    } else {
+		        //lấy thông tin sản phẩm từ CSDL và lưu vào giỏ hàng
+		        $product = db::get_one("select * from tbl_product where id=$id");
+		        
+		        $_SESSION['cart'][$id] = array(
+		            'id' => $id,
+		            'name' => $product->name,
+		            'img' => $product->img,
+		            'category'=> $product->category_name,
+		            'number' => $quantity,
+		            'price' => $product->price
+		        );
+		    }
 			//quay tro lai trang gio hang
 			header("location:cart"); //khi khong truyen vao action thi mac dinh action=index
 		}
